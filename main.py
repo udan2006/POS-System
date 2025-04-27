@@ -26,9 +26,25 @@ while True:
             item_code = input("Enter the item code: ")
             try:
                 internal_price = float(input("Enter the internal price: "))
+                if internal_price < 0:
+                    print("Invalid price. Please enter a positive number for internal price.")
+                    continue
+
                 discount = float(input("Enter the discount: "))
+                if discount < 0:
+                    print("Invalid price. Please enter a positive number for discount.")
+                    continue
+
                 quantity = int(input("Enter the quantity: "))
+                if quantity < 0:
+                    print("Invalid price. Please enter a positive number for quantity.")
+                    continue
+
                 sales_price = float(input("Enter the sales price: "))
+                if sales_price < 0:
+                    print("Invalid price. Please enter a positive number for sales price.")
+                    continue
+
             except ValueError:
                 print("Invalid input. Please enter a number.")
                 continue
