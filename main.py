@@ -36,7 +36,7 @@ while True:
                     continue
 
                 quantity = int(input("Enter the quantity: "))
-                if quantity < 0:
+                if quantity <= 0:
                     print("Invalid price. Please enter a positive number for quantity.")
                     continue
 

@@ -65,6 +65,9 @@ class Basket_Manager:
                         if choice == 1:
                             try:
                                 new_price = float(input("Enter new price: "))
+                                if new_price <= 0:
+                                    print("Invalid price. Please enter a positive number for price.")
+                                    continue
                             except ValueError:
                                 print("Please enter a valid price.")
                                 continue
@@ -76,6 +79,9 @@ class Basket_Manager:
                         elif choice == 2:
                             try:
                                 new_discount = float(input("Enter new discount: "))
+                                if new_discount < 0:
+                                    print("Invalid discount. Please enter a positive number for discount.")
+                                    continue
                             except ValueError:
                                 print("Please enter a valid discount.")
                                 continue
@@ -86,6 +92,9 @@ class Basket_Manager:
                         elif choice == 3:
                             try:
                                 new_quantity = int(input("Enter new quantity: "))
+                                if new_quantity <= 0:
+                                    print("Invalid quantity. Please enter a positive number for quantity.")
+                                    continue
                             except ValueError:
                                 print("Please enter a valid quantity.")
                                 continue
